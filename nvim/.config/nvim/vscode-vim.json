@@ -1,0 +1,127 @@
+{
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "editor.lineNumbers": "relative",
+  "editor.cursorSurroundingLines": 8,
+  "vim.highlightedyank.enable": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "g", "d"],
+      "commands": ["git.openChange"],
+      "when": "editorTextFocus"
+    },
+    {
+      "before": ["<leader>", "d"],
+      "commands": ["editor.action.showHover"],
+      "silent": true
+    },
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.nextInFiles"],
+      "silent": true
+    },
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prevInFiles"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.files.save"],
+      "silent": true
+    },
+    {
+      "before": ["]", "b"],
+      "commands": ["workbench.action.nextEditor"],
+      "silent": true
+    },
+    {
+      "before": ["[", "b"],
+      "commands": ["workbench.action.previousEditor"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "s", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "s", "p"],
+      "commands": ["workbench.action.openRecent"]
+    },
+    {
+      "before": ["<C-w>", "h"],
+      "commands": ["workbench.action.focusLeftGroup"],
+      "when": "editorTextFocus"
+    },
+    {
+      "before": ["<C-w>", "l"],
+      "commands": ["workbench.action.focusRightGroup"],
+      "when": "editorTextFocus"
+    },
+    {
+      "before": ["<leader>", "q"],
+      "commands": ["workbench.action.closeActiveEditor"],
+      "when": "editorTextFocus"
+    },
+    {
+      "before": ["]", "c"],
+      "commands": ["workbench.action.editor.nextChange"],
+      "when": "editorTextFocus"
+    },
+    {
+      "before": ["[", "c"],
+      "commands": ["workbench.action.editor.previousChange"],
+      "when": "editorTextFocus"
+    },
+    {
+      "before": ["<leader>", "h", "p"],
+      "commands": ["git.openChange"],
+      "when": "editorTextFocus"
+    },
+    {
+      "before": ["<leader>", "t", "t"],
+      "commands": ["workbench.action.terminal.toggleTerminal"],
+      "when": "editorTextFocus || terminalFocus"
+    },
+    {
+      "before": ["z", "c"],
+      "commands": ["editor.fold"]
+    },
+    {
+      "before": ["z", "o"],
+      "commands": ["editor.unfold"]
+    },
+    {
+      "before": ["z", "a"],
+      "commands": ["editor.toggleFold"]
+    },
+    {
+      "before": ["z", "M"],
+      "commands": ["editor.foldAll"]
+    },
+    {
+      "before": ["z", "R"],
+      "commands": ["editor.unfoldAll"]
+    },
+    {
+      "before": ["z", "j"],
+      "commands": ["editor.gotoNextFold"]
+    },
+    {
+      "before": ["z", "k"],
+      "commands": ["editor.gotoPreviousFold"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["<C-n>"],
+      "commands": ["selectNextSuggestion"],
+      "when": "suggestWidgetVisible"
+    },
+    {
+      "before": ["<C-p>"],
+      "commands": ["selectPrevSuggestion"],
+      "when": "suggestWidgetVisible"
+    }
+  ]
+}
