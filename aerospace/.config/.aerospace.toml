@@ -6,17 +6,18 @@
 after-startup-command = [
   'exec-and-forget sketchybar',
   'exec-and-forget sketchybar --reload',
-  # 'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
   'exec-and-forget borders active_color=0xff00ffff inactive_color=0xff494d64 width=5.0'
 ]
 
 # Notify Sketchybar about workspace change
-exec-on-workspace-change = ['/bin/bash', '-c',
-    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+exec-on-workspace-change = [
+  '/bin/bash',
+  '-c',
+  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
 ]
 
 # Start AeroSpace at login
-start-at-login = false
+start-at-login = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -129,11 +130,9 @@ automatically-unhide-macos-hidden-apps = false
     alt-p = 'workspace p' # Postman
     alt-s = 'workspace s' # Slack
     alt-q = 'workspace q' # DBeaver
-    alt-1 = 'workspace 1'
+    alt-1 = 'workspace 1' 
     alt-2 = 'workspace 2'
     alt-3 = 'workspace 3'
-    alt-4 = 'workspace 4'
-
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-d = 'move-node-to-workspace d' # docker
@@ -143,10 +142,10 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-p = 'move-node-to-workspace p' # Postman
     alt-shift-s = 'move-node-to-workspace s' # Slack
     alt-shift-q = 'move-node-to-workspace q' # DBeaver
-    alt-shift-1 = 'move-node-to-workspace 1'
-    alt-shift-2 = 'move-node-to-workspace 2'
-    alt-shift-3 = 'move-node-to-workspace 3'
-    alt-shift-4 = 'move-node-to-workspace 4'
+    alt-shift-k = 'move-node-to-workspace k' # Karabiner
+    alt-1 = 'workspace 1' 
+    alt-2 = 'workspace 2'
+    alt-3 = 'workspace 3'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'
@@ -155,6 +154,10 @@ automatically-unhide-macos-hidden-apps = false
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-shift-semicolon = 'mode service'
+
+# limit workspace names to these letters and numbers
+[workspace-to-pattern]
+valid = '^[detwpskq123]$'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -188,7 +191,6 @@ automatically-unhide-macos-hidden-apps = false
     1 = [ 'secondary', 'main' ]
     2 = [ 'secondary', 'main' ]
     3 = [ 'secondary', 'main' ]
-    4 = [ 'secondary', 'main' ]
 
 # Google Chrome
 [[on-window-detected]]
@@ -210,7 +212,6 @@ run = 'move-node-to-workspace r'
 if.app-id = 'com.todesktop.230313mzl4w4u92'
 run = 'move-node-to-workspace e'
 
-
 # Slack
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
@@ -221,7 +222,6 @@ run = 'move-node-to-workspace s'
 if.app-id = 'com.mitchellh.ghostty'
 run = 'move-node-to-workspace t'
 
-
 # DBeaver
 [[on-window-detected]]
 if.app-id = 'org.jkiss.dbeaver.core.product'
@@ -231,4 +231,8 @@ run = 'move-node-to-workspace q'
 [[on-window-detected]]
 if.app-id = 'com.docker.docker'
 run = 'move-node-to-workspace d'
+
+[[on-window-detected]]
+if.app-id = 'com.postmanlabs.mac'
+run = 'move-node-to-workspace p'
 
