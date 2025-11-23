@@ -122,26 +122,31 @@ automatically-unhide-macos-hidden-apps = false
     alt-equal = 'resize smart +25'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
+    alt-d = 'workspace d' # docker
+    alt-e = 'workspace e' # cursor
+    alt-t = 'workspace t' # terminal (Ghostty)
+    alt-w = 'workspace w' # web browser (Chrome)
+    alt-p = 'workspace p' # Postman
+    alt-s = 'workspace s' # Slack
+    alt-q = 'workspace q' # DBeaver
     alt-1 = 'workspace 1'
     alt-2 = 'workspace 2'
     alt-3 = 'workspace 3'
     alt-4 = 'workspace 4'
-    alt-5 = 'workspace 5'
-    alt-6 = 'workspace 6'
-    alt-7 = 'workspace 7'
-    alt-8 = 'workspace 8'
-    alt-9 = 'workspace 9'
+
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
+    alt-shift-d = 'move-node-to-workspace d' # docker
+    alt-shift-e = 'move-node-to-workspace e' # cursor
+    alt-shift-t = 'move-node-to-workspace t' # terminal (Ghostty)
+    alt-shift-w = 'move-node-to-workspace w' # web browser (Chrome)
+    alt-shift-p = 'move-node-to-workspace p' # Postman
+    alt-shift-s = 'move-node-to-workspace s' # Slack
+    alt-shift-q = 'move-node-to-workspace q' # DBeaver
     alt-shift-1 = 'move-node-to-workspace 1'
     alt-shift-2 = 'move-node-to-workspace 2'
     alt-shift-3 = 'move-node-to-workspace 3'
     alt-shift-4 = 'move-node-to-workspace 4'
-    alt-shift-5 = 'move-node-to-workspace 5'
-    alt-shift-6 = 'move-node-to-workspace 6'
-    alt-shift-7 = 'move-node-to-workspace 7'
-    alt-shift-8 = 'move-node-to-workspace 8'
-    alt-shift-9 = 'move-node-to-workspace 9'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'
@@ -172,55 +177,58 @@ automatically-unhide-macos-hidden-apps = false
     shift-down = ['volume set 0', 'mode main']
 
 [workspace-to-monitor-force-assignment]
-    1 = 'main'
-    2 = ['secondary', 'main'] # cursor workspace, prefer monitor
-    3 = 'main'
-    4 = ['secondary', 'main'] # terminal workspace, prefer monitor
-    5 = 'main'
-    6 = ['secondary', 'main']
-    7 = ['secondary', 'main']
-    8 = ['secondary', 'main']
-    9 = ['secondary', 'main']
+    # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
+    d = 'main' # docker
+    e = [ 'secondary', 'main' ]# cursor
+    t = [ 'secondary', 'main' ] # terminal (Ghostty)
+    w = 'main' # web browser (Chrome)
+    p = 'main' # Postman
+    s = 'main' # Slack
+    q = 'main' # DBeaver
+    1 = [ 'secondary', 'main' ]
+    2 = [ 'secondary', 'main' ]
+    3 = [ 'secondary', 'main' ]
+    4 = [ 'secondary', 'main' ]
 
 # Google Chrome
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
-run = 'move-node-to-workspace 1'
+run = 'move-node-to-workspace w'
 
 # Notes
 [[on-window-detected]]
 if.app-id = 'com.apple.Notes'
-run = 'move-node-to-workspace 1'
+run = 'move-node-to-workspace r'
 
 # Reminders
 [[on-window-detected]]
 if.app-id = 'com.apple.iCal'
-run = 'move-node-to-workspace 1'
+run = 'move-node-to-workspace r'
 
 # Cursor
 [[on-window-detected]]
 if.app-id = 'com.todesktop.230313mzl4w4u92'
-run = 'move-node-to-workspace 2'
+run = 'move-node-to-workspace e'
 
 
 # Slack
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
-run = 'move-node-to-workspace 3'
+run = 'move-node-to-workspace s'
 
 # Ghostty
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
-run = 'move-node-to-workspace 4'
+run = 'move-node-to-workspace t'
 
 
 # DBeaver
 [[on-window-detected]]
 if.app-id = 'org.jkiss.dbeaver.core.product'
-run = 'move-node-to-workspace 5'
+run = 'move-node-to-workspace q'
 
 # Docker
 [[on-window-detected]]
 if.app-id = 'com.docker.docker'
-run = 'move-node-to-workspace 6'
+run = 'move-node-to-workspace d'
 

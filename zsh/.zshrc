@@ -7,3 +7,6 @@ export NVM_DIR="$HOME/.nvm"
 bindkey -v
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/hiskelkelemework/.antigravity/antigravity/bin:$PATH"
