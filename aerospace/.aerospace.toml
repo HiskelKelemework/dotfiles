@@ -123,25 +123,29 @@ automatically-unhide-macos-hidden-apps = false
     alt-equal = 'resize smart +25'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
+    alt-c = 'workspace c' # Calendar
     alt-d = 'workspace d' # docker
     alt-e = 'workspace e' # cursor
-    alt-t = 'workspace t' # terminal (Ghostty)
-    alt-w = 'workspace w' # web browser (Chrome)
+    alt-n = 'workspace n' # Notes
     alt-p = 'workspace p' # Postman
     alt-s = 'workspace s' # Slack
+    alt-t = 'workspace t' # terminal (Ghostty)
     alt-q = 'workspace q' # DBeaver
+    alt-w = 'workspace w' # web browser (Chrome)
     alt-1 = 'workspace 1' 
     alt-2 = 'workspace 2'
     alt-3 = 'workspace 3'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
+    alt-shift-c = 'move-node-to-workspace c' # Calendar
     alt-shift-d = 'move-node-to-workspace d' # docker
     alt-shift-e = 'move-node-to-workspace e' # cursor
-    alt-shift-t = 'move-node-to-workspace t' # terminal (Ghostty)
-    alt-shift-w = 'move-node-to-workspace w' # web browser (Chrome)
     alt-shift-p = 'move-node-to-workspace p' # Postman
+    alt-shift-n = 'move-node-to-workspace n' # Notes
     alt-shift-s = 'move-node-to-workspace s' # Slack
+    alt-shift-t = 'move-node-to-workspace t' # terminal (Ghostty)
     alt-shift-q = 'move-node-to-workspace q' # DBeaver
+    alt-shift-w = 'move-node-to-workspace w' # web browser (Chrome)
     alt-shift-1 = 'move-node-to-workspace 1' 
     alt-shift-2 = 'move-node-to-workspace 2'
     alt-shift-3 = 'move-node-to-workspace 3'
@@ -192,15 +196,16 @@ automatically-unhide-macos-hidden-apps = false
 if.app-id = 'com.google.Chrome'
 run = 'move-node-to-workspace w'
 
+
+# Calendar
+[[on-window-detected]]
+if.app-id = 'com.google.iCal'
+run = 'move-node-to-workspace c'
+
 # Notes
 [[on-window-detected]]
 if.app-id = 'com.apple.Notes'
-run = 'move-node-to-workspace r'
-
-# Reminders
-[[on-window-detected]]
-if.app-id = 'com.apple.iCal'
-run = 'move-node-to-workspace r'
+run = 'move-node-to-workspace n'
 
 # Cursor
 [[on-window-detected]]
