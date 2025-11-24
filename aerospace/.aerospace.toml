@@ -199,7 +199,7 @@ run = 'move-node-to-workspace w'
 
 # Calendar
 [[on-window-detected]]
-if.app-id = 'com.google.iCal'
+if.app-id = 'com.apple.iCal'
 run = 'move-node-to-workspace c'
 
 # Notes
