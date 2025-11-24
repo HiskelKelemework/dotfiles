@@ -180,7 +180,8 @@ automatically-unhide-macos-hidden-apps = false
 
 [workspace-to-monitor-force-assignment]
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-    d = 'main' # docker
+    c = 'main' # Calendar
+    d = 'main' # Docker
     e = [ 'secondary', 'main' ]# cursor
     t = [ 'secondary', 'main' ] # terminal (Ghostty)
     w = 'main' # web browser (Chrome)
