@@ -165,6 +165,12 @@ automatically-unhide-macos-hidden-apps = false
     r = ['flatten-workspace-tree', 'mode main'] # reset layout
     f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
     q = ['close-all-windows-but-current', 'mode main']
+    w = [
+      "exec-and-forget open -a 'Cursor'",
+      "exec-and-forget open -a 'Ghostty'",
+      "exec-and-forget open -a 'Slack'",
+      "exec-and-forget open -a 'Google Chrome'"
+    ]
 
     # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
     #s = ['layout sticky tiling', 'mode main']
@@ -182,12 +188,12 @@ automatically-unhide-macos-hidden-apps = false
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
     c = 'main' # Calendar
     d = 'main' # Docker
-    e = [ 'secondary', 'main' ]# cursor
+    e = [ 'secondary', 'main' ] # cursor
     t = [ 'secondary', 'main' ] # terminal (Ghostty)
     w = 'main' # web browser (Chrome)
     p = 'main' # Postman
     s = 'main' # Slack
-    q = 'main' # DBeaver
+    q = [ 'secondary', 'main' ] # DBeaver
     1 = [ 'secondary', 'main' ]
     2 = [ 'secondary', 'main' ]
     3 = [ 'secondary', 'main' ]
@@ -196,7 +202,6 @@ automatically-unhide-macos-hidden-apps = false
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
 run = 'move-node-to-workspace w'
-
 
 # Calendar
 [[on-window-detected]]
