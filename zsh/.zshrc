@@ -10,3 +10,10 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 # Added by Antigravity
 export PATH="/Users/hiskelkelemework/.antigravity/antigravity/bin:$PATH"
+
+# setup fzf file find and open in nvim
+alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
+
+source <(fzf --zsh)
+
+
