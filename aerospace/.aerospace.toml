@@ -132,6 +132,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-t = 'workspace t' # terminal (Ghostty)
     alt-q = 'workspace q' # DBeaver
     alt-w = 'workspace w' # web browser (Chrome)
+    alt-x = 'workspace x' # Telegram
     alt-1 = 'workspace 1' 
     alt-2 = 'workspace 2'
     alt-3 = 'workspace 3'
@@ -146,6 +147,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-t = 'move-node-to-workspace t' # terminal (Ghostty)
     alt-shift-q = 'move-node-to-workspace q' # DBeaver
     alt-shift-w = 'move-node-to-workspace w' # web browser (Chrome)
+    alt-shift-x = 'move-node-to-workspace x' # Telegram
     alt-shift-1 = 'move-node-to-workspace 1' 
     alt-shift-2 = 'move-node-to-workspace 2'
     alt-shift-3 = 'move-node-to-workspace 3'
@@ -241,4 +243,9 @@ run = 'move-node-to-workspace d'
 [[on-window-detected]]
 if.app-id = 'com.postmanlabs.mac'
 run = 'move-node-to-workspace p'
+
+# Telegram
+[[on-window-detected]]
+if.app-id = 'ru.keepcoder.Telegram'
+run = 'move-node-to-workspace x'
 
