@@ -17,6 +17,7 @@ vim.opt.wrap = false -- Disable line wrap
 vim.opt.termguicolors = true -- Enable 24-bit RGB colors
 vim.opt.cursorline = true -- Highlight current line
 vim.opt.clipboard = 'unnamedplus' -- Sync with system clipboard
+vim.opt.scrolloff = 8 -- Keep 8 lines above/below cursor
 
 -- set ripgrep to be the default grep
 vim.o.grepprg = 'rg --vimgrep --smart-case'
