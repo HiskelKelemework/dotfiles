@@ -13,7 +13,7 @@ map('n', '<leader>egs', ':Neotree git_status<CR>', { desc = 'Toggle git status t
 -- Telescope
 map('n', '<leader>sh', '<cmd>Telescope help_tags<CR>', { desc = '[S]earch [H]elp' })
 map('n', '<leader>sk', '<cmd>Telescope keymaps<CR>', { desc = '[S]earch [K]eymaps' })
-map('n', '<leader>sf', '<cmd>Telescope find_files hidden=true no_ignore=true<CR>', { desc = '[S]earch [F]iles' })
+map('n', '<leader>sf', '<cmd>Telescope find_files hidden=true <CR>', { desc = '[S]earch [F]iles' })
 map('n', '<leader>ss', '<cmd>Telescope builtin<CR>', { desc = '[S]earch [S]elect Telescope' })
 map('n', '<leader>sw', '<cmd>Telescope grep_string<CR>', { desc = '[S]earch current [W]ord' })
 map('n', '<leader>sg', '<cmd>Telescope live_grep<CR>', { desc = '[S]earch by [G]rep' })

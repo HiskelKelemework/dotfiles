@@ -20,6 +20,9 @@ return {
         },
       },
       pickers = {
+        find_files = {
+          find_command = { 'fd', '--type', 'f', '--hidden', '--exclude', '.git' },
+        },
         colorscheme = {
           enable_preview = true,
         },
