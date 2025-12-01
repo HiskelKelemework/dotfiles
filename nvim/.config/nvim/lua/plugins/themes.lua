@@ -1,11 +1,13 @@
 return {
-  { "folke/tokyonight.nvim" },
-  { "ellisonleao/gruvbox.nvim" },
-  { "catppuccin/nvim",         name = "catppuccin" },
+  { 'folke/tokyonight.nvim' },
+  { 'ellisonleao/gruvbox.nvim' },
+  { 'catppuccin/nvim', name = 'catppuccin' },
+  { 'Mofiqul/vscode.nvim' },
+  { 'rose-pine/neovim', name = 'rose-pine' },
   {
-    'Mofiqul/vscode.nvim',
+    'rebelot/kanagawa.nvim',
     config = function()
-      vim.cmd([[colorscheme vscode]])
+      vim.cmd [[colorscheme kanagawa]]
     end,
-  }
+  },
 }
