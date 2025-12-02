@@ -7,4 +7,5 @@
 7. brew install fzf, fuzzy finder for the terminal
 8. brew install bat, for syntax highlighted cat output
 7. install karabiner
+8. install git-delta (the delta diff tool)
 8. make setup.sh executable and run it
