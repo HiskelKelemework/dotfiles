@@ -1,4 +1,4 @@
 git:
   pagers:
-    - pager: delta --dark --paging=never --line-numbers --side-by-side --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
+    - pager: delta --dark --paging=never --line-numbers --side-by-side --navigate --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
       colorArg: always
