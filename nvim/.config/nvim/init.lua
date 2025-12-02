@@ -23,6 +23,7 @@ vim.opt.scrolloff = 8 -- Keep 8 lines above/below cursor
 vim.o.grepprg = 'rg --vimgrep --smart-case'
 vim.o.grepformat = '%f:%l:%c:%m'
 
+-- You might need to set other highlight groups to NONE as well for full transparency
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
@@ -117,3 +118,6 @@ vim.api.nvim_set_hl(0, 'DiffText', {
   ctermbg = 25, -- Slightly lighter blue for terminals
   ctermfg = 252,
 })
+
+vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE' })
