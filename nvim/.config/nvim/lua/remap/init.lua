@@ -76,7 +76,7 @@ map('n', '<leader>rj', ':resize -5<CR>', { desc = 'Decrease window height' })
 
 -- General
 map('n', '<leader>w', ':w<CR>', { desc = 'Save file' })
-map('n', '<leader>q', ':q<CR>', { desc = 'Quit' })
+map('n', '<leader>q', ':mksession!<CR> :q<CR>', { desc = 'Quit' })
 map('n', '<leader>.', '@:', { desc = 'Repeat last command' })
 map('n', '<Esc>', '<cmd>noh<CR><Esc>', { silent = true }) -- no highlight when pressing escape after searching
 
