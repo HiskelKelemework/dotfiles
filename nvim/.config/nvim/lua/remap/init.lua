@@ -26,6 +26,13 @@ map('n', 'gd', '<cmd>Telescope lsp_type_definitions<CR>', { buffer = bufnr, desc
 -- Zenmode
 map('n', '<leader>zz', ':ZenMode<CR>', { desc = 'Toggle Zenmode' })
 
+-- yank and paste behavior
+map({ 'n', 'v' }, '<leader>y', '"+y', { desc = '[Y]ank to system clipboard' })
+map({ 'n', 'v' }, '<leader>yy', '"+yy', { desc = '[Y]ank whole line to system clipboard' })
+map({ 'n', 'v' }, '<leader>Y', '"+Y', { desc = '[Y]ank remaining line to system clipboard' })
+map({ 'n', 'v' }, '<leader>p', '"+p', { desc = '[P]aste from system clipboard after cursor' })
+map({ 'n', 'v' }, '<leader>P', '"+P', { desc = '[P]aste from system clipboard before cursor' })
+
 map('n', '<leader>/', function()
   local builtin = require 'telescope.builtin'
   -- You can pass additional configuration to Telescope to change the theme, layout, etc.
