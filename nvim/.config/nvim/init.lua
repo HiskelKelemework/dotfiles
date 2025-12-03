@@ -133,3 +133,7 @@ vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'NONE' })
 vim.api.nvim_set_hl(0, 'FoldColumn', { bg = 'NONE' })
 -- git signs inline git blame color
 vim.api.nvim_set_hl(0, 'GitSignsCurrentLineBlame', { fg = '#bbbbbb', italic = true })
+
+--------------------------------------------  LSP -----------------------------------------------------
+vim.lsp.enable 'lua_ls'
+vim.lsp.enable 'vtsls'
