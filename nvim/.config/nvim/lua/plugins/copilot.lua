@@ -4,6 +4,6 @@ return {
   cmd = { 'Copilot', 'Copilot enable', 'Copilot disable' }, -- Lazy-load on these commands
   event = 'InsertEnter', -- Optional: Also load on insert mode entry
   config = function()
-    vim.g.copilot_no_tab_map = true -- Avoid overriding Tab (customize as needed)
+    vim.g.copilot_no_tab_map = false -- Avoid overriding Tab (customize as needed)
   end,
 }

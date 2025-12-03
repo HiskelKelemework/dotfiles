@@ -15,3 +15,5 @@ export PATH="/Users/hiskelkelemework/.antigravity/antigravity/bin:$PATH"
 alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
 
 source <(fzf --zsh)
+
+export XDG_CONFIG_HOME="$HOME/.config"

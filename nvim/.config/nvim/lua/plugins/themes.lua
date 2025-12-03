@@ -4,10 +4,5 @@ return {
   { 'catppuccin/nvim', name = 'catppuccin' },
   { 'Mofiqul/vscode.nvim' },
   { 'rose-pine/neovim', name = 'rose-pine' },
-  {
-    'rebelot/kanagawa.nvim',
-    config = function()
-      vim.cmd [[colorscheme kanagawa]]
-    end,
-  },
+  { 'rebelot/kanagawa.nvim' },
 }
