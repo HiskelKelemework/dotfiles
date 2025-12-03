@@ -23,6 +23,9 @@ map('n', '<leader>s.', '<cmd>Telescope oldfiles<CR>', { desc = '[S]earch Recent 
 map('n', '<leader><leader>', '<cmd>Telescope buffers<CR>', { desc = '[ ] Find existing buffers' })
 map('n', 'gd', '<cmd>Telescope lsp_type_definitions<CR>', { buffer = bufnr, desc = 'Go to type definition' })
 
+-- Zenmode
+map('n', '<leader>zz', ':ZenMode<CR>', { desc = 'Toggle Zenmode' })
+
 map('n', '<leader>/', function()
   local builtin = require 'telescope.builtin'
   -- You can pass additional configuration to Telescope to change the theme, layout, etc.
