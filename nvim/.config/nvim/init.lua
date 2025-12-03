@@ -120,6 +120,14 @@ vim.api.nvim_set_hl(0, 'DiffText', {
   ctermfg = 252,
 })
 
+-- THEME and TRANSPARENCY SETTINGS
 vim.cmd 'colorscheme gruvbox'
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
 vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE' })
+-- folke/ZenMode background transparency
+vim.api.nvim_set_hl(0, 'ZenBg', { bg = 'NONE' })
+-- Make sign column and fold column transparent
+-- fold column is the column that shows the fold markers, left of the line number column
+-- sign column is the column that shows git/diff/diagnostic signs, left of the fold column
+vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'FoldColumn', { bg = 'NONE' })
