@@ -131,3 +131,5 @@ vim.api.nvim_set_hl(0, 'ZenBg', { bg = 'NONE' })
 -- sign column is the column that shows git/diff/diagnostic signs, left of the fold column
 vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'NONE' })
 vim.api.nvim_set_hl(0, 'FoldColumn', { bg = 'NONE' })
+-- git signs inline git blame color
+vim.api.nvim_set_hl(0, 'GitSignsCurrentLineBlame', { fg = '#bbbbbb', italic = true })
