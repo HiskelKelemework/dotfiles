@@ -18,11 +18,5 @@ source <(fzf --zsh)
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
-# open nvim with session file if it exists
-vim() {
-  if [ -f Session.vim ]; then
-    nvim -S Session.vim
-  else
-    nvim
-  fi
-}
+alias vim='nvim'
+alias lgit='lazygit'
