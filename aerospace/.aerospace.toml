@@ -132,7 +132,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-t = 'workspace t' # terminal (Ghostty)
     alt-q = 'workspace q' # DBeaver
     alt-w = 'workspace w' # web browser (Chrome)
-    alt-x = 'workspace x' # Telegram
+    alt-x = 'workspace x' # Telegram, WhatsApp
     alt-1 = 'workspace 1' 
     alt-2 = 'workspace 2'
     alt-3 = 'workspace 3'
@@ -247,5 +247,10 @@ run = 'move-node-to-workspace p'
 # Telegram
 [[on-window-detected]]
 if.app-id = 'ru.keepcoder.Telegram'
+run = 'move-node-to-workspace x'
+
+# WhatsApp
+[[on-window-detected]]
+if.app-id = 'net.whatsapp.WhatsApp'
 run = 'move-node-to-workspace x'
 
