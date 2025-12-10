@@ -3,13 +3,6 @@
 
 local map = vim.keymap.set
 
-map('n', '<C-d>', '<C-d>zz', { desc = 'Jump down half a page and center cursor vertically' })
-map('n', '<C-u>', '<C-u>zz', { desc = 'Jump up half a page and center cursor vertically' })
-
--- File Explorer (neo-tree)
-map('n', '<leader>e', ':Neotree toggle<CR>', { desc = 'Toggle file explorer' })
-map('n', '<leader>egs', ':Neotree git_status<CR>', { desc = 'Toggle git status tree' })
-
 -------------------------------------------- Telescope [Begin] --------------------------------------------
 map('n', '<leader>sh', '<cmd>Telescope help_tags<CR>', { desc = '[S]earch [H]elp' })
 map('n', '<leader>sk', '<cmd>Telescope keymaps<CR>', { desc = '[S]earch [K]eymaps' })
@@ -73,6 +66,12 @@ map('n', 'N', 'Nzz', { desc = 'Go to previous search occurence and center cursor
 -- jump list navigation centered
 map('n', '<C-o>', '<C-o>zz', { desc = 'Jump backward in jump list and center cursor vertically', remap = false })
 map('n', '<C-i>', '<C-i>zz', { desc = 'Jump forward in jump list and center cursor vertically', remap = false })
+
+-- move selected text up and down vertically
+map('v', 'K', ":m '<-2<CR>gv=gv")
+map('v', 'J', ":m '>+1<CR>gv=gv")
+-- doing J takes the line below and concatenates it to the line where the cursor is. similar to gJ, except cursor stays put.
+map('n', 'J', 'mzJ`z')
 
 -- Git (fugitive)
 local opts = { noremap = true, silent = true }

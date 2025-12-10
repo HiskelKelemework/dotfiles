@@ -61,6 +61,7 @@ return {
           enable = true,
           set_jumps = true, -- whether to set jumps in the jumplist
           goto_next_start = {
+            [']a'] = { query = '@parameter.inner', desc = 'Next function argument' },
             [']f'] = { query = '@call.outer', desc = 'Next function call start' },
             [']m'] = { query = '@function.outer', desc = 'Next method/function def start' },
             [']i'] = { query = '@conditional.outer', desc = 'Next conditional start' },
@@ -78,6 +79,7 @@ return {
             [']L'] = { query = '@loop.outer', desc = 'Next loop end' },
           },
           goto_previous_start = {
+            ['[a'] = { query = '@parameter.inner', desc = 'Prev function argument' },
             ['[f'] = { query = '@call.outer', desc = 'Prev function call start' },
             ['[m'] = { query = '@function.outer', desc = 'Prev method/function def start' },
             ['[i'] = { query = '@conditional.outer', desc = 'Prev conditional start' },
