@@ -115,9 +115,6 @@ map('n', '<leader>cc', ':cclose<CR>', { desc = 'Close quick fix list' })
 -- Keybindings for diagnostics
 map('n', '<leader>d', ':lua vim.diagnostic.open_float()<CR>', { desc = 'Show diagnostics in float' })
 
----------------------------------------- Github copilot [Begin] -------------------------------------------
-vim.g.copilot_no_tab_map = true -- Disable default <Tab> mapping
-
 -- Accept with Ctrl+Y
 map('i', '<C-Y>', 'copilot#Accept("<CR>")', { expr = true, silent = true, replace_keycodes = false })
 map('i', '<C-W>', 'copilot#AcceptWord("<CR>")', { expr = true, silent = true, replace_keycodes = false })
