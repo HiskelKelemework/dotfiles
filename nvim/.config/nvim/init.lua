@@ -4,6 +4,7 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.g.autread = true -- Automatically detect file changes from outside and reload file
+vim.opt.cmdheight = 0 -- remove gap below nvim status bar
 
 -- Basic settings for performance and usability
 vim.opt.ignorecase = true
@@ -122,7 +123,7 @@ vim.api.nvim_set_hl(0, 'DiffText', {
 })
 
 -- THEME and TRANSPARENCY SETTINGS
-vim.cmd 'colorscheme gruvbox'
+vim.cmd 'colorscheme rose-pine'
 
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
 vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE' })
