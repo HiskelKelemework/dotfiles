@@ -115,8 +115,5 @@ map('n', '<leader>cc', ':cclose<CR>', { desc = 'Close quick fix list' })
 -- Keybindings for diagnostics
 map('n', '<leader>d', ':lua vim.diagnostic.open_float()<CR>', { desc = 'Show diagnostics in float' })
 
--- Accept with Ctrl+Y
-map('i', '<C-Y>', 'copilot#Accept("<CR>")', { expr = true, silent = true, replace_keycodes = false })
-map('i', '<C-W>', 'copilot#AcceptWord("<CR>")', { expr = true, silent = true, replace_keycodes = false })
-map('i', '<C-L>', 'copilot#AcceptLine("<CR>")', { expr = true, silent = true, replace_keycodes = false })
----------------------------------------- Github copilot [End] -------------------------------------------
+-- Undotree
+map('n', '<leader>u', vim.cmd.UndotreeToggle)

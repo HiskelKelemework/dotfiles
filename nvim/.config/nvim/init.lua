@@ -6,6 +6,10 @@ vim.g.maplocalleader = ' '
 vim.g.autread = true -- Automatically detect file changes from outside and reload file
 vim.opt.cmdheight = 0 -- remove gap below nvim status bar
 
+-- save undo history to file
+vim.opt.undofile = true
+vim.opt.undodir = vim.fn.stdpath 'state' .. '/undo'
+
 -- Basic settings for performance and usability
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
