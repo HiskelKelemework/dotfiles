@@ -125,19 +125,6 @@ vim.api.nvim_set_hl(0, 'DiffText', {
 -- THEME and TRANSPARENCY SETTINGS
 vim.cmd 'colorscheme rose-pine'
 
-vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE' })
--- folke/ZenMode background transparency
-vim.api.nvim_set_hl(0, 'ZenBg', { bg = 'NONE' })
--- Make sign column and fold column transparent
--- fold column is the column that shows the fold markers, left of the line number column
--- sign column is the column that shows git/diff/diagnostic signs, left of the fold column
-vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'FoldColumn', { bg = 'NONE' })
--- git signs inline git blame color
-vim.api.nvim_set_hl(0, 'GitSignsCurrentLineBlame', { fg = '#bbbbbb', italic = true })
-vim.api.nvim_set_hl(0, 'NotifyBackground', { bg = 'NONE' })
-
 --------------------------------------------  LSP -----------------------------------------------------
 vim.lsp.enable 'lua_ls'
 vim.lsp.enable 'vtsls'
