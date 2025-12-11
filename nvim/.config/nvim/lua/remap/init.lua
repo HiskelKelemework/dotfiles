@@ -40,7 +40,6 @@ map('n', '<leader>sn', function()
   builtin.find_files { cwd = vim.fn.stdpath 'config' }
 end, { desc = '[S]earch [N]eovim files' })
 -------------------------------------------- Telescope [End] --------------------------------------------
-
 -- Zenmode
 map('n', '<leader>zz', ':ZenMode<CR>', { desc = 'Toggle Zenmode' })
 
@@ -67,9 +66,15 @@ map('n', 'N', 'Nzz', { desc = 'Go to previous search occurence and center cursor
 map('n', '<C-o>', '<C-o>zz', { desc = 'Jump backward in jump list and center cursor vertically', remap = false })
 map('n', '<C-i>', '<C-i>zz', { desc = 'Jump forward in jump list and center cursor vertically', remap = false })
 
+-- go to last edited and last visually selected places with verticall centering
+map('n', 'gv', 'gvzz', { desc = 'Go to last visually selected sectionzzzz and center cursor vertically', remap = false })
+-- I want to go back to normal mode because I want to see the fat cursor to know where I'm at
+map('n', 'gi', 'gizz<Esc>', { desc = 'Go to last edited line and center cursor vertically and go back to normal mode', remap = false })
+
 -- move selected text up and down vertically
 map('v', 'K', ":m '<-2<CR>gv=gv")
 map('v', 'J', ":m '>+1<CR>gv=gv")
+
 -- doing J takes the line below and concatenates it to the line where the cursor is. similar to gJ, except cursor stays put.
 map('n', 'J', 'mzJ`z')
 
