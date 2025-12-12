@@ -20,3 +20,4 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 alias vim='nvim'
 alias lgit='lazygit'
+alias ldock='lazydocker'
