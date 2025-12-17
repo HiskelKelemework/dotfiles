@@ -4,7 +4,8 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.g.autread = true -- Automatically detect file changes from outside and reload file
-vim.opt.cmdheight = 0 -- remove gap below nvim status bar
+-- vim.opt.cmdheight = 0 -- remove gap below nvim status bar
+vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
 
 -- save undo history to file
 vim.opt.undofile = true
@@ -97,38 +98,44 @@ vim.opt.foldlevelstart = 99
 
 require 'remap'
 
--- VSCode Dark+ inspired diff colors for fugitive.nvim
+-- THEME and TRANSPARENCY SETTINGS
+vim.cmd 'colorscheme rose-pine'
+
 vim.api.nvim_set_hl(0, 'DiffAdd', {
-  bg = '#2b473e', -- VSCode-like green/teal for additions
-  fg = '#d4d4d4', -- Light gray/white for text
-  ctermbg = 23, -- Dark teal (~#2b473e) for 256-color terminals
-  ctermfg = 252, -- Light gray for terminals
+  bg = '#093413',
+  fg = 'NONE',
 })
 
 vim.api.nvim_set_hl(0, 'DiffDelete', {
-  bg = '#4a1d2a', -- VSCode-like red for deletions
-  fg = '#d4d4d4',
-  ctermbg = 52, -- Dark red (~#4a1d2a) for terminals
-  ctermfg = 252,
+  bg = '#3f0001',
+  fg = 'NONE',
 })
 
 vim.api.nvim_set_hl(0, 'DiffChange', {
-  bg = '#2b3a55', -- VSCode-like blue for changed lines
-  fg = '#d4d4d4',
-  ctermbg = 24, -- Dark blue (~#2b3a55) for terminals
-  ctermfg = 252,
+  bg = '#0f2d4d',
+  fg = 'NONE',
 })
 
 vim.api.nvim_set_hl(0, 'DiffText', {
-  bg = '#3f4a6b', -- Slightly lighter blue for modified text within changes
-  fg = '#d4d4d4',
-  ctermbg = 25, -- Slightly lighter blue for terminals
-  ctermfg = 252,
+  bg = '#007acc',
+  fg = '#ffffff', -- VS Code highlights changed text with bright fg
+  bold = true,
 })
-
--- THEME and TRANSPARENCY SETTINGS
-vim.cmd 'colorscheme rose-pine'
 
 --------------------------------------------  LSP -----------------------------------------------------
 vim.lsp.enable 'lua_ls'
 vim.lsp.enable 'vtsls'
+
+-- This is copied from ChatGPT, works for now.
+vim.api.nvim_create_user_command('LspRestart', function()
+  local bufnr = vim.api.nvim_get_current_buf()
+
+  for _, client in ipairs(vim.lsp.get_active_clients { bufnr = bufnr }) do
+    client.stop()
+  end
+
+  -- re-trigger LSP attach
+  vim.defer_fn(function()
+    vim.cmd 'edit'
+  end, 100)
+end, {})

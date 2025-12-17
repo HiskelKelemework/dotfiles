@@ -126,6 +126,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-c = 'workspace c' # Calendar
     alt-d = 'workspace d' # docker
     alt-e = 'workspace e' # cursor
+    alt-f = 'workspace f' # finder 
     alt-n = 'workspace n' # Notes
     alt-p = 'workspace p' # Postman
     alt-s = 'workspace s' # Slack
@@ -141,6 +142,7 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-c = 'move-node-to-workspace c' # Calendar
     alt-shift-d = 'move-node-to-workspace d' # docker
     alt-shift-e = 'move-node-to-workspace e' # cursor
+    alt-shift-f = 'move-node-to-workspace f' # finder
     alt-shift-p = 'move-node-to-workspace p' # Postman
     alt-shift-n = 'move-node-to-workspace n' # Notes
     alt-shift-s = 'move-node-to-workspace s' # Slack
@@ -191,6 +193,7 @@ automatically-unhide-macos-hidden-apps = false
     c = 'main' # Calendar
     d = 'main' # Docker
     e = [ 'secondary', 'main' ] # cursor
+    f = 'main' # finder
     t = [ 'secondary', 'main' ] # terminal (Ghostty)
     w = 'main' # web browser (Chrome)
     p = 'main' # Postman
@@ -254,3 +257,7 @@ run = 'move-node-to-workspace x'
 if.app-id = 'net.whatsapp.WhatsApp'
 run = 'move-node-to-workspace x'
 
+# findek
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'move-node-to-workspace f'
