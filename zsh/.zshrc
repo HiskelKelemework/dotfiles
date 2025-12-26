@@ -21,3 +21,23 @@ export XDG_CONFIG_HOME="$HOME/.config"
 alias vim='nvim'
 alias lgit='lazygit'
 alias ldock='lazydocker'
+
+# [start] ------------ for customizing ps1 (shell prompt message) ------------
+# Enable git branch info
+autoload -Uz vcs_info
+setopt PROMPT_SUBST
+
+# Update vcs info before each prompt
+precmd() {
+  vcs_info
+}
+
+# Enable git only
+zstyle ':vcs_info:*' enable git
+
+# Git branch in RED
+zstyle ':vcs_info:git:*' formats '%F{red}(%b)%f'
+
+# Prompt
+PROMPT='%F{green}%n%f %3~ %F{blue}git%f: ${vcs_info_msg_0_} %# '
+# [end] ------------
