@@ -35,9 +35,17 @@ precmd() {
 # Enable git only
 zstyle ':vcs_info:*' enable git
 
-# Git branch in RED
+# Git branch in red
 zstyle ':vcs_info:git:*' formats '%F{red}(%b)%f'
 
-# Prompt
-PROMPT='%F{green}%n%f %3~ %F{blue}git%f: ${vcs_info_msg_0_} %# '
+# Prompt function to conditionally show git
+prompt_git() {
+  # Only show git: (branch) if in git repo
+  if [[ -n $vcs_info_msg_0_ ]]; then
+    echo "%F{blue}git%f: $vcs_info_msg_0_"
+  fi
+}
+
+# Final prompt: username green, last 3 dirs, conditional git
+PROMPT='%F{green}%n%f %3~ $(prompt_git) %# '
 # [end] ------------
