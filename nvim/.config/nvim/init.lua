@@ -125,6 +125,7 @@ vim.api.nvim_set_hl(0, 'DiffText', {
 --------------------------------------------  LSP -----------------------------------------------------
 vim.lsp.enable 'lua_ls'
 vim.lsp.enable 'vtsls'
+vim.lsp.enable 'rust_ls'
 
 -- This is copied from ChatGPT, works for now.
 vim.api.nvim_create_user_command('LspRestart', function()
